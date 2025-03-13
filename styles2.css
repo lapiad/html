@@ -5,36 +5,99 @@ body {
     padding: 0;
   }
   
-  form {
-    width: 800px;
-    height: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    border: 3px solid #002fff;
+  .login-box{
+    background-color: lightblue;
+    margin: 10%;
+    border: 5px solid #1900ff;
+    padding-top: 1%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    text-align: center;
+  }  
+  .login-header{
+    padding-bottom: 5%;
+  }
+  .form-inputs{
+    padding-bottom: 5%;
     
   }
-  
-  label, input, button {
-    display: block;
-    width: 100%;
-    height: 100;
-    margin-bottom: 10px;
-    text-align: center;
+  .form-inputs input{
+    width: 50%;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 10px;
+    border-color: #1900ff;
   }
-  
+  .form-inputs label{
+    margin-right: 45%;
+  }
   button {
     background: #1900ff;
     color: white; 
-    padding: 10px 20px;
-    border: none;
+    padding: 10px 40px;
+    border: 1px solid black;
     cursor: pointer;
     border-radius: 50px;
     text-align: center;
+    transition: 1s;
   }
-  
-  button:hover {
-    background: #fbff00;
-    padding: 10px;
-    margin: 10px;
+  button:disabled{
+    background-color: rgb(224, 223, 223);
+    border: none;
+    cursor:not-allowed;
+  }
+  .register-box{
+    background-color: lightblue;
+    margin: 10%;
+    border: 3px solid #1900ff;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    text-align: center;
+  }
+  .register-header{
+    padding: 3%;
+  }
+  .register-inputs{
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .register-inputs label{
+    margin-right: 1%;
+  }
+  .register-inputs input{
+    width: 35%;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    border-color: #1900ff; 
+  }
+  .forgot-box{
+    background-color: lightblue;
+    margin: 10%;
+    border: 3px solid #1900ff;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    text-align: center;
+  }
+  .forgot-header{
+    padding: 2%;
+  }
+  .forgot-inputs{
+    padding-bottom: 2%;
+    text-align: center;
+  }
+  .forgot-inputs label{
+    margin-right: 1%;
+  }
+  .forgot-inputs input{
+    width: 50%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 10px;
+    border-color: #1900ff;
   }

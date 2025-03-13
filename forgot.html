@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Forgot Password</title>
-  <link rel="stylesheet" href="styles2.css">
-  
-</head>
-<body>
-  
-  <div class="form-container">
-    
-    <h1>Forgot Password</h1>
-    
-    <form action="forgot-password.html" method="post">
-      
-      <div class="form-group">
-        
-        <label for="emailOrPhone">Email or Phone Number:</label>
-        <input type="text" id="emailOrPhone" name="emailOrPhone" placeholder="Enter your email or phone number" required>
-        
+<html>
+  <head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div class="forgot-box">
+      <div class="forgot-form">
+        <div class="forgot-header">
+          <h1>Forgot Password</h1>
+        </div>
+        <form action="#" id="form-register">
+          <div class="forgot-form">
+            <div class="forgot-inputs"><label for="emailOrPhone">Email or Phone Number:</label>
+              <div class="input-box">
+                <input
+                  type="text"
+                  id="emailOrPhone"
+                  name="emailOrPhone"
+                  placeholder="Enter your email or phone number"
+                  required
+                />
+              </div>
+          </div>
+          <div>
+            <button type="submit" class="submit-btn">Reset Password</button>
+          </div>
+        </form>
+        <div class="register-footer">
+          <div class="login-link">
+            <a href="login.html">Back to Login</a>
+          </div>
+        </div>
+        </div>
       </div>
-      
-      <button type="submit" class="submit-btn">Reset Password</button>
-      
-      <div class="login-link">
-        
-        <a href="login.html">Back to Login</a>
-        
-      </div>
-      
-    </form>
-  </div>
-  
-</body>
+    </div>
+  </body>
 </html>

@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Locker System</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <form>
-    <h2>Student Locker System</h2>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form>
+      <h2>Student Locker System</h2>
 
-    <!-- Student Registration Form -->
-    <div id="register">
+      <!-- Student Registration Form -->
+      <div id="register">
         <h3>Register Student</h3>
-        <input type="text" id="studentName" placeholder="Enter Name">
-        <input type="text" id="studentId" placeholder="Enter Student ID">
-        <button onclick="registerStudent()">Register</button>
-    </div>
+        <input type="text" id="studentName" placeholder="Enter Name" />
+        <input type="text" id="studentId" placeholder="Enter Student ID" />
+        <button id="register-btn" onclick="registerStudent()">Register</button>
+      </div>
 
-    <h3>Available Lockers</h3>
-    <div class="locker-container">
+      <h3>Available Lockers</h3>
+      <div class="locker-container">
         <div class="locker" onclick="openLocker(1)">Locker 1</div>
         <div class="locker" onclick="openLocker(2)">Locker 2</div>
         <div class="locker" onclick="openLocker(3)">Locker 3</div>
         <div class="locker" onclick="openLocker(4)">Locker 4</div>
-    </div>
+      </div>
 
-    <!-- Locker PIN Entry Modal -->
-    <div id="lockerModal" class="modal">
+      <!-- Locker PIN Entry Modal -->
+      <div id="lockerModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3 id="lockerTitle">Locker</h3>
-            <p id="lockerOwner"></p>
-            <p id="lockerTime"></p>
-            <input type="password" id="lockerPin" placeholder="Enter PIN">
-            <button onclick="lockUnlockLocker()">Submit</button>
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h3 id="lockerTitle">Locker</h3>
+          <p id="lockerOwner"></p>
+          <p id="lockerTime"></p>
+          <input type="password" id="lockerPin" placeholder="Enter PIN" />
+          <button id="locker-modal" onclick="lockUnlockLocker()">Submit</button>
         </div>
-    </div>
+      </div>
 
-    <!-- Time Log Display -->
-    <h3>Locker Usage Logs</h3>
-    <table border="1">
+      <!-- Time Log Display -->
+      <h3>Locker Usage Logs</h3>
+      <table border="1">
         <thead>
-            <tr>
-                <th>Locker No.</th>
-                <th>Student Name</th>
-                <th>Student ID</th>
-                <th>Time In</th>
-                <th>Time Out</th>
-            </tr>
+          <tr>
+            <th>Locker No.</th>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Time In</th>
+            <th>Time Out</th>
+          </tr>
         </thead>
-        <tbody id="logTable">
-        </tbody>
-    </table>
+        <tbody id="logTable"></tbody>
+      </table>
 
-    <script src="script.js"></script>
-   </form>
-</body>
+      <script src="script.js"></script>
+    </form>
+  </body>
 </html>

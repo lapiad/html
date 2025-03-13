@@ -3,6 +3,13 @@ let lockers = {}; // Store locker assignments, PINs, and time logs
 let logs = []; // Store locker usage logs
 let selectedLocker = null;
 
+document.getElementById("register-btn").addEventListener("click", function(event){
+    event.preventDefault();
+});
+document.getElementById("locker-modal").addEventListener("click", function(event){
+    event.preventDefault();
+});
+
 // Register a student
 function registerStudent() {
     let name = document.getElementById("studentName").value;
@@ -15,7 +22,9 @@ function registerStudent() {
 
     // Register student in the students object
     students[studentId] = { name };
+    console.log(students);
     alert(`${name} (ID: ${studentId}) registered successfully!`);
+    
 }
 
 // Open a locker modal
@@ -84,7 +93,7 @@ function lockUnlockLocker() {
             name: students[studentId].name, 
             timeIn: currentTime
         };
-
+        console.log(lockers);
         alert(`Locker Locked by ${students[studentId].name}`);
         lockerElement.classList.add("locked"); // Lock the locker
     }
