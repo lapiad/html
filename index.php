@@ -12,11 +12,12 @@
         <div class="login-header">
           <h1>Log in</h1>
         </div>
-        <form action="#" id="form-login">
+        <form action="Locker.php" method="post" id="form-login">
           <div class="form-inputs">
             <label for="username">Username</label>
             <div class="input-box">
               <input
+                name="username"
                 type="text"
                 id="username"
                 class="input-field"
@@ -38,6 +39,7 @@
             <label for="password">Password</label>
             <div class="input-box">
               <input
+                name="password"
                 type="password"
                 id="password"
                 class="input-field"
@@ -55,7 +57,7 @@
                 />
               </svg>
             </div>
-            <button disabled type="submit" form="form-login" id="login-btn">
+            <button type="submit" form="form-login" id="login-btn">
               Login
             </button>
           </div>
@@ -74,6 +76,6 @@
         </div>
       </div>
     </div>
-    <script src="script2.js"></script>
+    <!-- <script src="script2.js"></script> -->
   </body>
 </html>

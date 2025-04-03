@@ -5,7 +5,7 @@ document
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    if (username === "lei" && password === "lei") {
+    if (username === "CMU@2025" && password === "CMU@2025") {
       alert("succesful");
     } else {
       alert("Not succesful");
