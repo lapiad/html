@@ -1,4 +1,5 @@
 <?php
+include("conn.php");
 session_start();
 if (!isset($_POST["username"]) && !isset($_POST["password"])) {
   if (!isset($_SESSION["StudentName"])) {
@@ -10,18 +11,6 @@ if (!isset($_POST["username"]) && !isset($_POST["password"])) {
 
 $loginUsername = $_POST['username'];
 $loginPassword = $_POST['password'];
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "locker";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 $studentName = login($loginUsername, $loginPassword, $conn);
 $_SESSION["StudentName"] = $studentName;
