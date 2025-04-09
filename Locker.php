@@ -1,48 +1,8 @@
 <?php
 include("conn.php");
 session_start();
-if (!isset($_POST["username"]) && !isset($_POST["password"])) {
-  if (!isset($_SESSION["StudentName"])) {
-    header("Location: /locker-system");
-  } else {
-    echo $_SESSION["StudentName"];
-  }
-}
-
-$loginUsername = $_POST['username'];
-$loginPassword = $_POST['password'];
-
-$studentName = login($loginUsername, $loginPassword, $conn);
-$_SESSION["StudentName"] = $studentName;
-function login($loginUsername, $loginPassword, $conn)
-{
-  $sql = "SELECT * FROM `user` WHERE username='$loginUsername' AND password='$loginPassword'";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-    // output data of each row
-    while ($row = $result->fetch_assoc()) {
-      $studentId = $row["student_id"];
-    }
-  } else {
-    echo "0 results";
-  }
-
-
-
-  $sql2 = "SELECT * FROM `Student` WHERE student_id='$studentId'";
-  $result = $conn->query($sql2);
-
-  if ($result->num_rows > 0) {
-    // output data of each row
-    while ($row = $result->fetch_assoc()) {
-      $studentName = $row["firstname"] . " " . $row["lastname"];
-    }
-  } else {
-    echo "0 results";
-  }
-  $conn->close();
-  return $studentName;
+if (!isset($_SESSION["StudentName"]) && !isset($_SESSION["StudentName"])) {
+  header("Location: /locker-system");
 }
 ?>
 <!DOCTYPE html>
@@ -60,34 +20,28 @@ function login($loginUsername, $loginPassword, $conn)
 
   ?>
   <form>
-    <i>current user logged in: <?php echo $studentName ?></i>
+    <i>current user logged in:
+      <?php echo "<small>" . $_SESSION['StudentId'] . "</small> - " . $_SESSION['StudentName'] ?>
+    </i>
     <h2>Student Locker System</h2>
-
-    <!-- Student Registration Form -->
-    <div id="register">
-      <h3>Register Student</h3>
-      <input type="text" id="studentName" placeholder="Enter Name" />
-      <input type="text" id="studentId" placeholder="Enter Student ID" />
-      <button id="register-btn" onclick="registerStudent()">Register</button>
-    </div>
 
     <h3>Available Lockers</h3>
     <div class="locker-container">
-      <div class="locker" onclick="openLocker(1)">Locker 1</div>
-      <div class="locker" onclick="openLocker(2)">Locker 2</div>
-      <div class="locker" onclick="openLocker(3)">Locker 3</div>
-      <div class="locker" onclick="openLocker(4)">Locker 4</div>
+      <div value="1" class="locker">Locker 1</div>
+      <div value="2" class="locker">Locker 2</div>
+      <div value="3" class="locker">Locker 3</div>
+      <div value="4" class="locker">Locker 4</div>
     </div>
 
     <!-- Locker PIN Entry Modal -->
     <div id="lockerModal" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close">&times;</span>
         <h3 id="lockerTitle">Locker</h3>
         <p id="lockerOwner"></p>
         <p id="lockerTime"></p>
-        <input type="password" id="lockerPin" placeholder="Enter PIN" />
-        <button id="locker-modal" onclick="lockUnlockLocker()">Submit</button>
+        <input id="lockerPin" placeholder="Enter PIN" />
+        <button id="locker-modal">Submit</button>
       </div>
     </div>
 
@@ -105,9 +59,18 @@ function login($loginUsername, $loginPassword, $conn)
       </thead>
       <tbody id="logTable"></tbody>
     </table>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <div class="log-out">
+      <small>
+        <a href="logout.php">Logout</a>
+      </small>
+    </div>
+
   </form>
+
 </body>
 
 </html>

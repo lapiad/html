@@ -14,7 +14,7 @@
       <div class="login-header">
         <h1>Log in</h1>
       </div>
-      <form action="Locker.php" method="post" id="form-login">
+      <form action="login.php" method="post" id="form-login">
         <div class="form-inputs">
           <label for="username">Username</label>
           <div class="input-box">
