@@ -25,35 +25,35 @@
           <div class="register-inputs">
             <label for="Name">Firstname:</label>
             <div class="input-box">
-              <input name="firstname" type="text" id="Name" placeholder="Enter your Firstname" required />
+              <input name="firstname" type="firstname" id="Name" placeholder="Enter your Firstname" required />
             </div>
           </div>
 
           <div class="register-inputs">
             <label for="Name">Lastname:</label>
             <div class="input-box">
-              <input name="lastname" type="text" id="Name" placeholder="Enter your Lastname" required />
+              <input name="lastname" type="lastname" id="Name" placeholder="Enter your Lastname" required />
             </div>
           </div>
 
           <div class="register-inputs">
             <label for="Name">Middlename:</label>
             <div class="input-box">
-              <input name="middlename" type="text" id="Name" placeholder="Enter your Middlename" required />
+              <input name="middlename" type="middlename" id="Name" placeholder="Enter your Middlename" required />
             </div>
           </div>
 
           <div class="register-inputs">
             <label for="Address">Address:</label>
             <div class="input-box">
-              <input name="Address" type="text" id="Address" placeholder="Enter your Address" required />
+              <input name="Address" type="Address" id="Address" placeholder="Enter your Address" required />
             </div>
           </div>
 
           <div class="register-inputs">
             <label for="Email">Email:</label>
             <div class="input-box">
-              <input name="Email" type="text" id="Email" placeholder="Enter your Email" required />
+              <input name="Email" type="Email" id="Email" placeholder="Enter your Email" required />
             </div>
           </div>
 
@@ -67,21 +67,14 @@
           <div class="register-inputs">
             <label for="Username"> Username:</label>
             <div class="input-box">
-              <input name="Username" type="text" id="Username" placeholder="Enter your Username" required />
+              <input name="Username" type="Username" id="Username" placeholder="Enter your Username" required />
             </div>
           </div>
 
           <div class="register-inputs">
             <label for="Password">Password:</label>
             <div class="input-box">
-              <input name="Password" type="text" id="Password" placeholder="Enter your Password" required />
-            </div>
-          </div>
-
-          <div class="register-inputs">
-            <label for="Confirm Password">Confirm Password:</label>
-            <div class="input-box">
-              <input name="Confirm_Password" type="text" id="ConfirmPassword" placeholder="Confirm Password" required />
+              <input name="Password" type="password" id="Password" placeholder="Enter your Password" required />
             </div>
           </div>
 

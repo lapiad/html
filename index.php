@@ -43,7 +43,7 @@
 
       <div class="login-footer">
         <small>
-          <a href="forgot.html">Forgot Password?</a>
+          <a href="forgot.php">Forgot Password?</a>
         </small>
 
         <div>
